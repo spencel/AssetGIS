@@ -1,0 +1,233 @@
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"   <!-- required when using gx-prefixed elements -->						
+	<Document>
+		<!-- inherited from Feature element -->
+		<name>...</name>                      		<!-- string -->
+		<visibility>1</visibility>        		    <!-- boolean -->
+		<open>0</open>                     		   	<!-- boolean -->
+		<atom:author>...<atom:author>      		   	<!-- xmlns:atom -->
+		<atom:link href=" "/>               		<!-- xmlns:atom -->
+		<address>...</address>                		<!-- string -->
+		<xal:AddressDetails>...</xal:AddressDetails><!-- xmlns:xal -->
+		<phoneNumber>...</phoneNumber>        		<!-- string -->
+		<Snippet maxLines="2">...</Snippet>   		<!-- string -->
+		<description>...</description>        		<!-- string -->
+		<AbstractView>...</AbstractView>      		<!-- Camera or LookAt -->
+		<TimePrimitive>...</TimePrimitive>
+		<styleUrl>...</styleUrl>              		<!-- anyURI -->
+		<StyleSelector>...</StyleSelector>
+		<Region>...</Region>
+		<Metadata>...</Metadata>              		<!-- deprecated in KML 2.2 -->
+		<ExtendedData>...</ExtendedData>      		<!-- new in KML 2.2 -->
+		<!-- specific to Document -->
+		<!-- 0 or more Schema elements -->
+		<Style> id="myStyle">
+			<BalloonStyle id="myBalloonStyle">
+				<bgColor>ffffffff</bgColor>
+				<textColor>ff000000</textColor>
+				<text>[string]</text>
+				<displayMode>default</displayMode>
+			</BalloonStyle>
+			<IconStyle id="myIconStyle">	
+				<Icon>
+					<href></href>
+					<scale></scale>
+				</Icon>
+				<ColorStyle id="myColorStyle">
+					<color></color>
+					<colorMode></colorMode>
+				</ColorStyle>
+			</IconStyle>
+			<LabelStyle id="myLabelStyle">
+				<!-- inherited from ColorStyle -->
+				<color>ff0000cc</color>
+				<colorMode>random</colorMode>
+				<!-- specific to LabelStyle -->
+				<scale>1.5</scale>
+			</LabelStyle>
+			<LineStyle id="myLineStyle">
+				<!-- inherited from ColorStyle -->
+				<color>ffffffff</color>            			<!-- kml:color -->
+  				<colorMode>normal||random</colorMode>      	<!-- colorModeEnum -->
+				<!-- specific to LineStyle -->
+				<width>1</width>                            <!-- float -->
+				<gx:outerColor>ffffffff</gx:outerColor>     <!-- kml:color -->
+				<gx:outerWidth>0.0</gx:outerWidth>          <!-- float -->
+				<gx:physicalWidth>0.0</gx:physicalWidth>    <!-- float -->
+				<gx:labelVisibility>0</gx:labelVisibility>  <!-- boolean -->
+			</LineStyle>
+			<PolyStyle id="myPolyStyle">
+				<!-- inherited from ColorStyle -->
+				<color>ffffffff</color>            		<!-- kml:color -->
+				<colorMode>normal||random</colorMode> 	<!-- kml:colorModeEnum -->
+				<!-- specific to PolyStyle -->
+				<fill>1</fill>                     		<!-- boolean -->
+				<outline>1</outline>               		<!-- boolean -->
+			</PolyStyle>
+		</Style>
+		<!-- 0 or more Feature elements -->
+		<Placemark id="myPointPlacemark">				
+			<name></name>
+			<description><![CDATA[Write Html in here]]></description>
+			</description>
+			<gx:balloonVisibility>0||1</gx:balloonVisibility> <!-- 0 (not visible) or 1 (visible) -->
+			<styleUrl></styleUrl>
+			<LookAt>			
+				<longitude></longitude>
+				<latitude></latitude>
+				<altitude></altitude>		
+				<heading></heading>
+				<tilt></tilt>
+				<range></range>
+				<altitudeMode>clampToGround||absolute</altitudeMode>
+				||
+				<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+			</LookAt>
+			<Point>			
+				<coordinates>longitude, latitude, height</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="myLineStringPlacemark">		
+			<name></name>
+			<description><![CDATA[Write Html in here]]></description>
+			<gx:balloonVisibility>0||1</gx:balloonVisibility> <!-- 0 (not visible) or 1 (visible) -->
+			<styleUrl></styleUrl>			
+			<LookAt>			
+				<longitude></longitude>
+				<latitude></latitude>
+				<altitude></altitude>		
+				<heading></heading>	
+				<tilt></tilt>
+				<range></range>
+				<altitudeMode>clampToGround||absolute</altitudeMode>
+				||
+				<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+			</LookAt>
+			<LineString>			
+				<!-- specific to LineString -->
+				<gx:altitudeOffset>0</gx:altitudeOffset>  	<!-- double -->
+				<extrude>0</extrude>                      	<!-- boolean -->
+				<tessellate>0</tessellate>                	<!-- boolean -->
+				<altitudeMode>clampToGround||absolute</altitudeMode>
+				||
+				<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+				<gx:drawOrder>0</gx:drawOrder>            	<!-- integer -->
+				<coordinates>								<!-- lon,lat[,alt] -->
+					longitude, latitude, [height]	
+					etc., etc., etc.
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<GroundOverlay id="myGroundOverlay">
+			<!-- inherited from Feature element -->
+			<name>...</name>                      <!-- string -->
+			<visibility>1</visibility>            <!-- boolean -->
+			<open>0</open>                        <!-- boolean -->
+			<atom:author>...<atom:author>         <!-- xmlns:atom -->
+			<atom:link href=" "/>                <!-- xmlns:atom -->
+			<address>...</address>                <!-- string -->
+			<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+			<phoneNumber>...</phoneNumber>        <!-- string -->
+			<Snippet maxLines="2">...</Snippet>   <!-- string -->
+			<description>...</description>        <!-- string -->
+			<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+			<TimePrimitive>...</TimePrimitive>
+			<styleUrl>...</styleUrl>              <!-- anyURI -->
+			<StyleSelector>...</StyleSelector>
+			<Region>...</Region>
+			<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+			<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+			<!-- inherited from Overlay element -->
+			<color>ffffffff</color>                   <!-- kml:color -->
+			<drawOrder>0</drawOrder>                  <!-- int -->
+			<Icon>...</Icon>
+			<!-- specific to GroundOverlay -->
+			<altitude>0</altitude>                    <!-- double -->
+			<altitudeMode>clampToGround||absolute</altitudeMode>
+			||
+			<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+			<LatLonBox>
+				<north>...</north>                      <!-- kml:angle90 -->
+				<south>...</south>                      <!-- kml:angle90 -->
+				<east>...</east>                        <!-- kml:angle180 -->
+				<west>...</west>                        <!-- kml:angle180 -->
+				<rotation>0</rotation>                  <!-- kml:angle180 -->
+			</LatLonBox>
+			<gx:LatLonQuad>
+				<coordinates>...</coordinates>          <!-- four lon,lat tuples. for nonrectagular quadrilateral overlays -->
+			</gx:LatLonQuad>
+		</GroundOverlay>
+		<gx:Tour>			
+			<name></name>	
+			<gx:Playlist>	
+				<gx:FlyTo>
+					<gx:flyToMode>smooth||bounce</gx:flyToMode>
+					<gx:duration></gx:duration>
+					<LookAt>
+						<longitude>-119.748584</longitude>
+						<latitude>33.736266</latitude>
+						<altitude>0</altitude>
+						<heading>-9.295926</heading>
+						<tilt>84.0957450</tilt>
+						<range>4469.850414</range>
+						<altitudeMode>clampToGround||absolute</altitudeMode>
+						||
+						<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+					</LookAt>
+					||
+					<Camera>
+						<TimePrimitive>...</TimePrimitive>  <!-- gx:TimeSpan or gx:TimeStamp -->
+						<gx:ViewerOptions>
+							<option name="streetview" type="boolean"></option>
+							<option name="historicalimagery" type="boolean"></option>
+							<option name="sunlight" type="boolean"></option>
+							<option name="groundnavigation" type="boolean"></option>
+						</gx:ViewerOptions>
+						<longitude>0</longitude>            <!-- kml:angle180 -->
+						<latitude>0</latitude>              <!-- kml:angle90 -->
+						<altitude>0</altitude>              <!-- double -->
+						<heading>0</heading>                <!-- kml:angle360 -->
+						<tilt>0</tilt>                      <!-- kml:anglepos180 -->
+						<roll>0</roll>                      <!-- kml:angle180 -->
+						<altitudeMode>clampToGround||absolute</altitudeMode>
+						||
+						<gx:altitudeMode>relativeToSeaFloor||clampToSeaFloor||relativeToGround||clampToGround||absolute</gx:altitudeMode>
+					</Camera>
+				</gx:FlyTo>
+				<gx:AnimatedUpdate>
+					<gx:duration>[time in seconds as double]</gx:duration>
+					<Update>
+						<targetHref></targetHref>
+						<Change>
+							<IconStyle targetId="myIconStyle">	
+								<Icon></Icon>	
+								<href></href>
+								<scale></scale>
+							</IconStyle>
+							<BalloonStyle targetId="myBalloonStyle">
+								<bgColor>ffffffff</bgColor>
+								<textColor>ff000000</textColor>
+								<text>[string]</text>
+								<displayMode>default</displayMode>
+							</BalloonStyle>	
+						</Change>
+						<Create></Create>
+						<Delete></Delete>
+					</Update>
+					<gx:delayedStart>[time in seconds as double]</gx:delayedStart>
+				</gx:AnimatedUpdate>
+				<gx:Wait>
+					<gx:duration>[time in seconds as double]</gx:duration>
+				</gx:Wait>
+				<gx:FlyTo>
+					[etc.]
+				</gx:FlyTo>
+				<gx:AnimatedUpdate>
+					[etc.]
+				</gx:AnimatedUpdate>
+				<gx:Wait>
+					[etc.]
+				</gx:Wait>
+			</gx:Playlist>
+		</gx:Tour>
+	</Document>
+</kml>
